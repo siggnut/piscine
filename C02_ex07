@@ -18,7 +18,7 @@ char	*ft_strupcase(char *str)
 int main()
 {
   char str[] = "lol";
- 	int first;
-	first = ft_strupcase(str);
-	printf("%d", first);
+  char *first;
+  first = ft_strupcase(str);
+   printf("%d", first);
 }
