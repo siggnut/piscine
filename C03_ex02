@@ -6,19 +6,19 @@ char    *ft_strcat(char *dest, char *src)
     i = 0;
     j = 0;
    // char combined[20];//
-    while (src[i] != '\0') // increment until reach the end of src //
+    while (dest[j] != '\0')
     {
-        i++;
+        j++;
     }
-   // src[i] = '\0';//
-    while (dest[j] != '\0') // while not at the end of dest, copy dest to src and increment AKA move letter by letter //
+    
+    while (src[i] != '\0')
     {   
-      src[i] = dest[j];
+      dest[j] = src[i];
         j++;
         i++;
     }
-       
-    dest[j] = '\0'; // add null at the end //
+   // src[i] = '\0';   
+    dest[j] = '\0';
     return (dest); //dest//
 }
 
@@ -27,8 +27,8 @@ char    *ft_strcat(char *dest, char *src)
 
 int main()
 {
-  char src[50] = "hello";
-  char dest[50] = "world";
+  char src[15] = "world";
+  char dest[15] = "hello";
   ft_strcat(dest, src);
-  printf("%s", src);
+  printf("%s", dest);
 }
