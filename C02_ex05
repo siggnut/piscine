@@ -23,8 +23,8 @@ int    main()
     char str1[] = "Lol";
   	int first;
 	int second;
-	first = ft_str_is_lowercase(str);
-	second = ft_str_is_lowercase(str1);
+	first = ft_str_is_uppercase(str);
+	second = ft_str_is_uppercase(str1);
 	printf("%d", first);
 	printf("%d", second);
 }
