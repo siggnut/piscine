@@ -1,0 +1,21 @@
+testing 
+void ft_putnbr(int nb)
+{
+    int    i;
+    char str[i];
+
+    i = 0;
+    (str[i]) = nb;
+    while (str[i])
+    {
+        write(1, &str[i], 1);
+        i++;
+    }
+}
+  int main()
+  {
+    char str[] = "hello";
+    ft_putnbr(str);
+    printf("%s", str);
+   //printf("%d", ft_putnbr(str));
+    }
