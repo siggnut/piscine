@@ -1,0 +1,22 @@
+int grid[4][4];
+
+grid[4][4] ={0, 0, 0, 0,
+              0, 0, 0, 0,
+              0, 0, 0, 0,
+              0, 0, 0, 0,}; // or {} ?? or ((xxxx))
+
+int i;
+int j; //columns to be incremented
+
+i = 0;
+j = 0; // or int row & column? 
+// grid[row][column]?
+int puzzle_check(int row, int col, int num, int *input) 
+while (i < 4) //(grid[0][j] == 0)
+ {  
+    {
+        while ()
+    } 
+  
+ }
+ i++;
