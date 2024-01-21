@@ -1,6 +1,6 @@
 char    *ft_strcat(char *dest, char *src)
 {
-    int i;
+    int i; // unsigned int again here
     int j;
 
     i = 0;
