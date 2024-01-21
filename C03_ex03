@@ -1,6 +1,6 @@
 char    *ft_strncat(char *dest, char *src, unsigned int nb)
 {
-    int i;
+    int i; //unsigned ints! not big difference but cleaner and no errors can happen
     int j;
 
     i = 0;
