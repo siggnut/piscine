@@ -22,3 +22,14 @@ void test(char *str)
   // printf("%s", str);
    // printf("%d", test(str));
     }
+another version is;
+void test(char *str)
+{
+  unsigned int i;
+  i = 0;
+while (str[i])
+{
+  i++;
+}
+write(1, str, i);
+}
