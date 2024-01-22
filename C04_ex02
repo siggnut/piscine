@@ -1,21 +1,88 @@
-testing 
-void ft_putnbr(int nb)
+void    ft_putnbr(int nb)
 {
-    int    i;
-    char str[i];
+    long number;
+    int i;
+    char a[10];
 
+    // a[0] = int number % 10 = '0';
+    number = nb;
     i = 0;
-    (str[i]) = nb;
-    while (str[i])
+    if (nb == 0)
     {
-        write(1, &str[i], 1);
-        i++;
+        write(1, "0", 1);
+        return ;
+    }
+    if (number < 0)
+    {
+        number = -number;
+        write(1, "-", 1);
+    }
+    while (number > 0)
+    {
+        a[i++] = (number % 10) + 48; //or '0'
+        number /= 10;
+    }
+    while (i > 0)
+    {    write(1, &a[--i], 1);
     }
 }
-  int main()
-  {
-    char str[] = "hello";
-    ft_putnbr(str);
-    printf("%s", str);
-   //printf("%d", ft_putnbr(str));
+
+    #include <stdio.h>
+
+    int main()
+    {
+    printf("test: 2147483647");
+    ft_putnbr(2147483647);
+    printf("\n");
+
+    printf("test: -2147483648");
+    ft_putnbr(-2147483648);
+    printf("\n");
     }
+   /* {
+        a[i] = number % 10 + '0'; // + 48 to into char
+        number = number / 10;
+        write (1, &a[i], i);
+    }
+    i++;*/
+
+    V2
+
+void main()
+{
+int no;
+int index;
+int b;
+char a[10];
+char t;
+
+index = 0;
+ if (number < 0)
+    {
+        number = -number;
+        write(1, "-", 1);
+    }  
+ if (no == 0)
+ {
+        write(1, "0", 1);
+        return ;
+ }
+//int i = 0;
+while (no > 0) 
+{
+    a[index] = no % 10 + 48;
+    no = no / 10;
+    index++;
+}
+b = 0;
+index--;
+while (b < index)
+{
+    t = a[index];
+    a[index] = a[b];
+    a[b] = t;
+    b++;
+    index--;
+}
+
+}
