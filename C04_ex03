@@ -1,0 +1,44 @@
+
+int	ft_atoi(char *str)
+{
+	int	result;
+	int	i;
+	int	neg_pos;
+	int minus;
+
+	i = 0;
+	minus = 0;
+	result = 0;
+	neg_pos = 1;
+	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
+	{
+		i++;
+	}
+	while (str[i] == '-' || str[i] == '+')
+	{
+		if (str[i] == '-')
+		{
+			minus++;
+		}
+		i++;
+	}
+	if (minus % 2 != 0) //if minus is not equal to zero, add - AKA its odd, 
+                      //bc checks if theres remainder, if divided by 2 (=even) theres no remainded and the if condition is false
+	{
+		neg_pos = -1;
+	}
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		result = result * 10 + (str[i] - '0');
+		i++;
+	}
+	return result * neg_pos;
+}
+
+#include <stdio.h>
+int main ()
+{
+	char str[] = "  ---123fg3h3";
+	int first = ft_atoi(str);
+	printf("%d", first);
+}
