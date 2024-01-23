@@ -31,11 +31,11 @@ void    ft_putnbr(int nb)
 
     int main()
     {
-    printf("test: 2147483647");
+    printf("test: 2147483647\n");
     ft_putnbr(2147483647);
     printf("\n");
 
-    printf("test: -2147483648");
+    printf("test: -2147483648\n");
     ft_putnbr(-2147483648);
     printf("\n");
     }
