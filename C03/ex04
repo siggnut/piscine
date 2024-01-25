@@ -1,8 +1,0 @@
-while (target[i] != find[i] && target[i] != '\0')
-{
-  i++;
-}
-if (target[i] = find[i])
-{
-  
-}
