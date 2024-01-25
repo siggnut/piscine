@@ -11,7 +11,7 @@ int ft_sqrt(int nb)
     }
     while (temp <= nb)
     {
-        temp = (long long int)test_number * test_number;//cast prevents overflow
+        temp = (long long int)test_number * test_number; //cast prevents overflow
         if (temp == nb)
         { 
             return (test_number);
@@ -21,8 +21,6 @@ int ft_sqrt(int nb)
     return (0); //else if?
 }
      
-
-
 #include <stdio.h>
 
 int main()
