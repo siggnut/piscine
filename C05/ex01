@@ -4,7 +4,7 @@ int ft_recursive_factorial(int nb)
     {
         return (1);
     }
-    if (nb < 0)//if not valid return 0 needs to be added
+    if (nb < 0) //if not valid return 0 needs to be added
     {
         return (0);
     }
