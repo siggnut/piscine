@@ -1,0 +1,81 @@
+//4 corners x-x y-y increment as long as you can
+// row length = column l = diagonal l are same!! bc square
+//longest of each directions, can we extend, need to remember largest and compare
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <fcntl.h>
+
+#define MAX_LINE_LENGTH 256
+#define ROW 256
+#define COL 256
+
+int min(int a, int b, int c) {
+    int min_val = a;
+    if (b < min_val) min_val = b;
+    if (c < min_val) min_val = c;
+    return min_val;
+}
+
+int largest_square(char map[ROW][COL])
+{
+    int square[ROW][COL] = {0};
+    int max_side = 0;
+
+    int i = 0;
+    int j = 0;
+    while(i < ROW)
+    {
+        j = 0;
+        while (j < COL)
+        {
+            if (map[i][j] == '.')
+            {
+                if (i == 0 || j == 0)
+                {    
+                    square[i][j] = 1;
+                }
+                else
+                {
+                    square[i][j] = min(square[i-1][j], square[i][j-1], square[i-1][j-1]) + 1;
+                }
+            }
+            j++;
+        }
+        i++;
+    }
+    return max_side * max_side;
+}
+---------------------------------
+#define row 10
+#define column 10
+
+char map[row][column];
+
+
+while (i < row && j < column) //1 or '.'?
+{
+    //start from index (1, 1)
+    int i = 1;
+    int j = 1;
+    if (square[i][j] == '.')
+    {
+        int min_value = min(square[i][j-1], square[i-1][j], square[i-1][j-1]) + 1;
+        square[i][j] = min_value + 1; //increment
+    }
+     //or +1?mininum value around cells
+        else if (square[i][j] == 'o')
+        {
+            break;
+        }
+    j++;
+    if(j == column)
+    {
+        i++;
+        j = 1;
+    }
+}
+else if(argv[i][j] == 0)
+{
+    square[i][j] == 0;
+}
