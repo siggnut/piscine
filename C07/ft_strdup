@@ -1,5 +1,3 @@
-
-#include <stdio.h>
 #include <stdlib.h>
 
 int	ft_strlen(char *str)
@@ -41,14 +39,14 @@ char	*ft_strdup(char *src)
 	return (dest);
 }
 
-int main() {
+#include <stdio.h>
+int main() 
+{
     char *src = "Hello, world!";
     char *duplicate;
 
     duplicate = ft_strdup(src);
-    if (duplicate != NULL) {
-        printf("Original string: %s\n", src);
-        printf("Duplicate string: %s\n", duplicate);
+    printf("Original: %s\n", src);
+    printf("Duplicate: %s\n", duplicate);
 
-    return 0;
 }
