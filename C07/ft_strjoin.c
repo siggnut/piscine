@@ -39,14 +39,11 @@ char    *ft_strjoin(int size, char **strs, char *sep)
     char    *result;
 
     i = 0;
-    total_len = 0;
     total_len = ft_strlen(sep) * (size - 1);
     while (i < size)
     {
         total_len += ft_strlen(strs[i]);
         i++;
-        if (i < size -1)
-          total_len += ft_strlen(sep);
     }
     result = (char *)malloc(sizeof(char) * (total_len + 1));
     result[0] = '\0';
