@@ -39,14 +39,11 @@ int	ft_ultimate_range(int **range, int min, int max)
 #include <stdio.h>
 int main()
 {
-	int min = -10;
-	int max = 10;
-	int i = 0;
-	int *range;
-	int elements = ft_ultimate_range(&range, min, max);
-	while (i < elements)
-	{
-		printf("%d ", range[i]);
-		i++;
-	}
+    int min = -10;
+    int max = 10;
+    int *range;
+    int size;
+    size = ft_ultimate_range(&range, min, max);
+    printf("%d ", size);
+
 }
