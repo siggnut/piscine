@@ -3,9 +3,8 @@ int ft_strlen(char *str)
   unsigned int i;
   i = 0;
 
-  while (str[i]) //same as str[i] != '\0'
+  while (str[i])
   {
-    //str1 = i;
     i++;
     }
     return (i);
