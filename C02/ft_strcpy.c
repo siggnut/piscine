@@ -21,5 +21,3 @@ int main()
   ft_strcpy(dest, src);
   printf("%s", dest);
 }
-
-// what string copy does essentially // 
