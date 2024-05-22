@@ -6,7 +6,7 @@ char    *ft_strncat(char *dest, char *src, unsigned int nb)
     i = 0;
     j = 0;
    
-    while (dest[j] != '\0')
+    while (dest[j])
     {
         j++;
     }
@@ -16,8 +16,7 @@ char    *ft_strncat(char *dest, char *src, unsigned int nb)
       dest[j] = src[i];
         j++;
         i++;
-    }
-   // src[i] = '\0';   
+    }  
     dest[j] = '\0';
     return (dest);
 }
