@@ -1,12 +1,11 @@
 char    *ft_strcat(char *dest, char *src)
 {
-    int i; // unsigned int again here
+    int i; // or unsigned int
     int j;
 
     i = 0;
     j = 0;
-   // char combined[20];//
-    while (dest[j] != '\0')
+    while (dest[j])
     {
         j++;
     }
@@ -16,10 +15,9 @@ char    *ft_strcat(char *dest, char *src)
       dest[j] = src[i];
         j++;
         i++;
-    }
-   // src[i] = '\0';   
+    }   
     dest[j] = '\0';
-    return (dest); //dest//
+    return (dest);
 }
 
 
